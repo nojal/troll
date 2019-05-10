@@ -51,6 +51,7 @@ spam(){
     echo "1/2/3?"
     read pilih
     if [ $pilih = "1" ]; then
+            clear
             echo "Troll Spam SMS"
             #function spam
             echo
@@ -79,6 +80,7 @@ spam(){
             fi
         mulai
     elif [ $pilih = "2" ]; then
+            clear
             echo "Troll Spam Call"
             #function spam
             echo
