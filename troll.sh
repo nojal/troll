@@ -1,84 +1,34 @@
-#!/bin/bash
-#///////////////////////////////////////////////////////////////////////////////
-#///////////////////////////////////////////////////////////////////////////////
-#////                       _            _  __                              ////
-#////                      | |          (_)/ _|                             ////
-#////                   ___| |_   _  ___ _| |_ ___ _ __                     ////
-#////                  |_  / | | | |/ __| |  _/ _ \ '__|                    ////
-#////                   / /| | |_| | (__| | ||  __/ |                       ////
-#////                  /___|_|\__,_|\___|_|_| \___|_|                       ////
-#////                                                                       ////
-#///////////////////////////////////////////////////////////////////////////////
-#///////////////////////////////////////////////////////////////////////////////
-#PERINGATAN : KESALAHAN ATAU KEJAHATAN ADALAH TANGGUNG JAWAB DARI PEMAKAI
-#GUNAKAN TOOLS UNTUK KEBAIKAN JANGAN DISALAH GUNAKAN :)
-troll(){
-    clear
-    sleep 0.03
-    echo "         _ "
-    sleep 0.03
-    echo "        /_)  _.-===-._ "
-    sleep 0.03
-    echo "       /  .; '_-.'- .'.     _ "
-    sleep 0.03
-    echo "  __ _/  /.'\ ._  '. , \   (_\ "
-    sleep 0.03
-    echo " /\_( \  |.'.-._'- .  '|     \ "
-    sleep 0.03
-    echo " |_)  /  |/'    ''--''\|     _\__ "
-    sleep 0.03
-    echo " \_)_|  /'  ._.   ._.  '\   / )(_\ "
-    sleep 0.03
-    echo " )/  (  \_      _      _/   \' (_| "
-    sleep 0.03
-    echo " /   /    \           /     _) (_/ "
-    sleep 0.03
-    echo " |   '',_ _'._'---'_.'_ _,.'    | \ "
-    sleep 0.03
-    echo " \    /  \ \  '''''  / / /     /   \ "
-    sleep 0.03
-    echo "  \_.'    \ \       / /  |   .' "
-    sleep 0.03
-    echo "   '--.,   \ \     / /  _;-'' "
-    sleep 0.03
-    echo "       '|   \ \   / /   | "
-    sleep 0.03
-    echo "       .;----'''''''----;. "
-    sleep 0.03
-    echo "      /(                 )\ "
-    sleep 0.03
-    echo "      \_''-------------''_/ "
-    sleep 0.03
-    echo "      | '';-----;-----;'' | "
-    sleep 0.03
-    echo "      | / : \ / : \ / : \ | "
-    sleep 0.03
-    echo "      |V.','.V.','.V.','.V| "
-    sleep 0.03
-    echo "      \'./_\.;./_\.;./_\.'/ "
-    sleep 0.03
-    echo "       ';..___________..;' "
-    sleep 0.03
-    echo " ============================="
-    sleep 2
-    echo " ==      Troll Project      =="
-    sleep 0.7
-    echo " ============================="
+start() {
+  clear
+  echo "=========================================="
+  sleep 0.03
+  echo
+  sleep 0.03
+  echo ▄▄▄█████▓ ██▀███   ▒█████   ██▓     ██▓
+  sleep 0.03
+  echo ▓  ██▒ ▓▒▓██ ▒ ██▒▒██▒  ██▒▓██▒    ▓██▒
+  sleep 0.03
+  echo ▒ ▓██░ ▒░▓██ ░▄█ ▒▒██░  ██▒▒██░    ▒██░
+  sleep 0.03
+  echo ░ ▓██▓ ░ ▒██▀▀█▄  ▒██   ██░▒██░    ▒██░
+  sleep 0.03
+  echo   ▒██▒ ░ ░██▓ ▒██▒░ ████▓▒░░██████▒░██████▒
+  sleep 0.03
+  echo   ▒ ░░   ░ ▒▓ ░▒▓░░ ▒░▒░▒░ ░ ▒░▓  ░░ ▒░▓  ░
+  sleep 0.03
+  echo   ░      ░▒ ░ ▒░  ░ ▒ ▒░ ░ ░ ▒  ░░ ░ ▒  ░
+  sleep 0.03
+  echo   ░      ░░   ░░  ░ ░ ▒    ░ ░  ░  ░ ░  ░
+  sleep 0.03
+  echo           ░         ░ ░      ░  ░    ░  ░
+  sleep 0.03
+  echo "=========================================="
+  sleep 0.07
 }
-load(){
-    echo -e "\n"
-    bar=" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "
-    barlength=${#bar}
-    i=0
-    while((i<100)); do
-        n=$((i*barlength / 100))
-        printf "\e[00;32m\r[%-${barlength}s]\e[00m" "${bar:0:n}"
-        ((i += RANDOM%5+2))
-        sleep 0.2
-    done
-}
+
 get_sms=$(curl -s http://zlucifer.com/api/sms.php)
 get_call=$(curl -s http://zlucifer.com/api/call.php)
+
 mulai (){
     echo "Gunakan Troll Project Lagi?"
     echo "y/n?"
@@ -93,7 +43,6 @@ mulai (){
 #spam
 spam(){
     clear
-    troll
     echo
     echo "[1] Spam SMS"
     echo "[2] Spam Telp"
@@ -117,19 +66,14 @@ spam(){
             read confirm
             echo
             if [ $confirm = "y" ]; then
-                    load
                     clear
                     echo Melakukan spam SMS ke nomor $target
                     echo
                     echo "Jangan close aplikasi sebelum spam selesai"
-                    echo "========================================"
+                    echo "=========================================="
                     target_do=$get_sms'/sms.php?nomor='$target'&paket='$paket
                     CURL_RESPONSE=`curl -s -o /dev/null -w "%{http_code}" $target_do`
-                    echo " Gunakan tools dengan bijak"
-                    echo
-                    echo " Love u always "
-                    echo " -zLucifer"
-                    echo "======================================="
+                    echo " Gunakan tools buat iseng"
             else
                     echo "Kesalahan"
             fi
@@ -144,7 +88,7 @@ spam(){
             echo
             echo "Gunakan API Grab/Toped?"
             echo "[1] GRAB"
-            echo "[2] TOPED"
+            echo "[2] TOKOPEDIA"
             echo "1/2?"
             read api
             if [ $api = "1" ]; then
@@ -157,7 +101,6 @@ spam(){
             read confirm
             echo
             if [ $confirm = "y" ]; then
-                  load
                   clear
                   echo Melakukan spam call ke nomor $target
                   echo
@@ -165,17 +108,13 @@ spam(){
                   echo "========================================"
                   cek_target=`curl -s $get_call/call.php?nomor=$target"&method="$api_spam`
                   echo -e $cek_target
-                  echo " Gunakan tools dengan bijak"
-                  echo
-                  echo " Love u always "
-                  echo " -zLucifer"
-                  echo "========================================"
+                  echo " Gunakan tools buat iseng"
             else
                   echo Kesalahan, silahkan coba lagi
             fi
         mulai
     elif [ $pilih = "3" ]; then
-        echo "Terimakasih sudah menggunakan Troll project"
+        echo "Terimakasih sudah menggunakan Troll project :)"
         close
     else
         clear
@@ -187,15 +126,8 @@ close(){
     exit
 }
 clear
-echo "Loading.."
-load
-clear
-troll
-echo Selamat datang kak, Siapa nick kaka? #tulisan keluar
-read nick #membaca yang ditulis
-clear
-troll
-echo Selamat datang $nick ":)"
+start
+echo Selamat datang Gilang ":)"
 echo
 echo "Mulai troll project?"
 echo "y/n?"
