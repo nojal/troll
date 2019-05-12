@@ -92,13 +92,13 @@ spam(){
             echo "[1] GRAB"
             echo "[2] TOKOPEDIA"
             echo "1/2?"
-            echo
             read api
             if [ $api = "1" ]; then
                   api_spam="grab"
             else
                   api_spam="toped"
             fi
+            echo
             echo Apakah nomor $target dan spam menggunakan $api_spam "sudah benar?"
             echo y/n?
             read confirm
