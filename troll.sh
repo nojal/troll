@@ -92,6 +92,7 @@ spam(){
             echo "[1] GRAB"
             echo "[2] TOKOPEDIA"
             echo "1/2?"
+            echo
             read api
             if [ $api = "1" ]; then
                   api_spam="grab"
@@ -110,7 +111,8 @@ spam(){
                   echo "========================================"
                   cek_target=`curl -s $get_call/call.php?nomor=$target"&method="$api_spam`
                   echo -e $cek_target
-                  echo " Gunakan tools buat iseng"
+                  echo 
+                  echo "Selamat bersenang-senang"
             else
                   echo Kesalahan, silahkan coba lagi
             fi
