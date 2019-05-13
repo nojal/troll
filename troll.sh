@@ -1,21 +1,5 @@
-  clear
-  echo "==================================="
-  sleep 0.03
-  echo  "__ __|   _ \    _ \   |      |"
-  sleep 0.03
-  echo  "   |    |   |  |   |  |      |"
-  sleep 0.03
-  echo  "   |    __ <   |   |  |      |"
-  sleep 0.03
-  echo  "  _|   _| \_\  \___/  _____| _____|"
-  sleep 0.03
-  echo "==================================="
-  sleep 0.07
-
 get_sms=$(curl -s http://zlucifer.com/api/sms.php)
 get_call=$(curl -s http://zlucifer.com/api/call.php)
-
-spam
 
 mulai (){
     echo "Mau iseng lagi ? "
@@ -31,6 +15,18 @@ mulai (){
 #spam
 spam(){
     clear
+    echo "==================================="
+    sleep 0.03
+    echo  "__ __|   _ \    _ \   |      |"
+    sleep 0.03
+    echo  "   |    |   |  |   |  |      |"
+    sleep 0.03
+    echo  "   |    __ <   |   |  |      |"
+    sleep 0.03
+    echo  "  _|   _| \_\  \___/  _____| _____|"
+    sleep 0.03
+    echo "==================================="
+    sleep 0.07
     echo
     echo "[1] Spam SMS"
     echo "[2] Spam Telp"
@@ -117,3 +113,12 @@ spam(){
 close(){
     exit
 }
+
+echo "Nama : "
+read nama
+if [ $nama = "gilang" ]; then
+  spam
+fi
+  echo "Nama tidak sesuai"
+  sleep 1
+  close
