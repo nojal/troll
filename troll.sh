@@ -113,12 +113,13 @@ spam(){
 close(){
     exit
 }
-
+clear
 echo "Nama : "
 read nama
 if [ $nama = "gilang" ]; then
   spam
 fi
+  echo
   echo "Nama tidak sesuai"
   sleep 1
   close
