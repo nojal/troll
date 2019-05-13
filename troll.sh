@@ -11,10 +11,11 @@
   sleep 0.03
   echo "==================================="
   sleep 0.07
-  spam
 
 get_sms=$(curl -s http://zlucifer.com/api/sms.php)
 get_call=$(curl -s http://zlucifer.com/api/call.php)
+
+spam
 
 mulai (){
     echo "Mau iseng lagi ? "
