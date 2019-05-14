@@ -9,6 +9,7 @@ mulai (){
     if [ $lagi = "y" ]; then
             spam
     else
+            clear
             echo "Terimakasih sudah menggunakan Troll project"
     fi
 }
@@ -46,6 +47,7 @@ spam(){
             echo "Berapa sms yang mau dikirim ?"
             read paket
             echo
+            clear
             echo Apakah nomor $target "dan SMS dikirim "$paket" sudah benar ?"
             echo y/t ?
             read confirm
@@ -83,8 +85,9 @@ spam(){
                   api_spam="toped"
             fi
             echo
+            clear
             echo Apakah nomor $target dan spam menggunakan $api_spam "sudah benar ?"
-            echo y/t?
+            echo y/t ?
             read confirm
             echo
             if [ $confirm = "y" ]; then
@@ -102,6 +105,7 @@ spam(){
             fi
         mulai
     elif [ $pilih = "3" ]; then
+        clear
         echo "Terimakasih sudah menggunakan Troll project :)"
         close
     else
@@ -114,12 +118,11 @@ close(){
     exit
 }
 clear
-echo "Nama : "
+echo "Mau Coba ?"
+echo "y/t ?"
 read nama
-if [ $nama = "gilang" ]; then
+if [ $nama = "y" ]; then
   spam
 fi
-  echo
-  echo "Nama tidak sesuai"
-  sleep 1
+  clear
   close
